@@ -10,6 +10,7 @@ window.addEvent('domready', function () {
 
     var model = {
         initialize: function () {
+            this.initialize_step = 0;
             this.condition_max_value = 5;
             this.increment_step = 1;
             this.index_var_change = 1
@@ -17,7 +18,7 @@ window.addEvent('domready', function () {
         },
         update: function () {
             var out = "";
-            for (var i = 0; i < this.condition_max_value; i = i + this.increment_step) {
+            for (var i = this.initialize_step; i < this.condition_max_value; i = i + this.increment_step) {
                 i = i + this.index_var_change;
                 out += i.toString() + " ";
             }
