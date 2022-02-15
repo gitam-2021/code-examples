@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Enhance42 Explorations</title> 
+    <script type="text/javascript" src="../../scripts/e42_all_min.js"></script> 
+    <link type="text/css" rel="stylesheet" href="../../css/e42_all_min.css"></link>
+  <style type='text/css'>
+     ol.interactivities > li {
+       list-style: none;
+       margin-bottom: 2em;
+     }
+     .problemheading {
+       font-size: 1.4em;
+       font-weight: bold;
+       font-family: monospace;
+       border-top: thin dotted black;
+       padding-top: 0.4em;
+     }
+     body {
+       margin-left: 2em;
+       margin-right: 2em;
+       overflow-y: visible;
+       font-size: x-large;
+     }
+    </style>
+  </head> 
+  <body>
+   <ol class='interactivities' id='interactivities'>
+<li title='modify-index-variable-walkthrough' id='modify-index-variable-walkthrough'><div class='hc-included'>
+<div>		
+	<p>Trace through the following loop.</p>
+			
+	<div class='e42_walkthrough'>
+        <pre>int n = 20;
+for ( n = 0; n &lt; 8; n++)
+{
+  n = n + 4;
+  printf("%d\n", n);
+}
+printf("%d\n", n);
+</pre>
+          <table><tr><th>n</th>
+          <th>Output</th></tr></table>
+          <script>				e42_walkthrough.setup.push([
+{variable: "n", line: 1, answer: 20},
+{variable: "n", line: 2, answer: 0},
+{gotoline: [4, 3], line: 2},
+{variable: "n", answer: 4 },
+{variable: "Output", answer: 4},
+{variable: "n", line: 2, answer: 5},
+{gotoline: [4, 3], line: 2},          
+{variable: "n", answer: 9 },
+{variable: "Output", answer: 9},
+{variable: "n", line: 2, answer: 10},
+{gotoline: 7, line: 2},
+{variable: "Output", answer: 10}         
+])
+       
+          </script>
+        </div>
+
+</div>
+</div></li>
+</ol>
+  <div class='vstreport'></div>
+</body></html>
