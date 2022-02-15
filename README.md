@@ -1,8 +1,10 @@
-# Observable C code examples
+# C Code Examples
 
-1. [Passing arrays to functions](observable/arrays/passing)
-2. [String representation](observable/strings/representation)
+## Observable
 
-# Interactive C code examples
+1. [Passing arrays](observable/arrays/passing) to functions
+2. String [representation](observable/strings/representation)
 
-1. [What happens when you change index variable in for loop?](interactive/loops/index-variable)  
+## Interactive
+
+1. What happens when you [change index variable](interactive/loops/index-variable) in a for loop?  
