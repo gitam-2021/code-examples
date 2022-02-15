@@ -8,3 +8,7 @@
 ## Interactive
 
 1. What happens when you [change index variable](interactive/loops/index-variable) in a for loop?  
+
+## Explorable Explainations
+
+1. What happens when you [change index variable](explorable/loops/index-variable) in a for loop?  

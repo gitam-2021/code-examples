@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base target="_top">
+    <title>Tangle: a JavaScript library for reactive documents</title>
+
+    <!-- stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../Fonts/Insolent/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../../Fonts/BorisBlackBloxx/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+
+    <!-- Tangle -->
+    <script type="text/javascript" src="../../Tangle.js"></script>
+
+    <!-- TangleKit -->
+    <link rel="stylesheet" href="../../TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="../../TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="../../TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="../../TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="../../TangleKit/TangleKit.js"></script>
+
+    <!-- examples -->
+    <script type="text/javascript" src="LoopExample.js"></script>
+
+</head>
+
+<body>
+    <div id="everything">
+        <!-- header -->
+
+        <div id="header">
+            <h1><a href="./">Explorable</a></h1>
+            <h3>code examples</h3>
+        </div> <!-- header -->
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- body -->
+
+        <div id="body">
+
+            <p>Click on the dragable elements and drag to right and left.</p>
+
+            <div id="forLoopExample" class="example">
+                <div class="exampleTop"></div>
+                <div class="exampleCenter">
+                    <code>for (int i = 0; i &lt; <span data-var="condition_max_value" class="TKAdjustableNumber" data-min="0" data-max="20"></span>; i = i + <span data-var="increment_step" class="TKAdjustableNumber" data-min="1" data-max="5"></span>) { 
+        <br>
+        &emsp;i = i + <span data-var="index_var_change" class="TKAdjustableNumber" data-min="0" data-max="20"></span>;
+        <br>
+        &emsp;printf("%d ", i); <br>
+        } </code>
+                </div>
+                <div class="exampleCenter">
+                    <code>
+                    <span>Output: <span data-var="prog_output"></span>
+                </code>
+                </span>
+                </div>
+                <div class="exampleBottom"></div>
+            </div>
+<!-- footer -->
+</div>
+<div id="footer">
+    <div id="footerShadow"></div>
+    
+    <div class="author"><a href="http://rohinibarla.com/">Gitam 2021</a></div>
+    
+    </div> <!-- footer -->
+
+
+</div> <!-- everything -->
+</body>
+
+</html>
