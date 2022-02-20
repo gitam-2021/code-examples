@@ -38,7 +38,7 @@
 		<script src="js/angular/controller.js" type="text/javascript"></script>
 	</head>
 	<body class="center-block" ng-app="Interpreter" ng-controller="Controller">
-		<div class="navbar navbar-custom navbar-static-top">
+		<!-- <div class="navbar navbar-custom navbar-static-top">
 			<div class="container">
 		    	<div class="navbar-custom">
 		      		<ul class="nav navbar-nav nav-justified">
@@ -49,7 +49,7 @@
 		      		</ul>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="container">
 			<div class="tile">
 				<div class="col-md-offset-2 col-md-8">
@@ -57,7 +57,7 @@
 					<h3 style="color: #fcfcfc">C to assembly compiler and assembly code interpreter.</h3>
 					<div class="waiting-for-angular">
 						<h1 class="ccode-title">
-							Input <strong>micro-C code</strong>
+							Sample <strong>C code</strong>
 						</h1>
 						<textarea id="ccode" name="ccode" maxlength="2000" ui-codemirror ng-model="ccode"></textarea>
 						<script>
@@ -69,12 +69,12 @@
 									var scope = angular.element($("body")).scope();
 									var lastChar = cm.getValue().slice(-1);
 									if (lastChar == "}" || lastChar == "\n" || lastChar == "\r" || lastChar == ";" || lastChar == " ") {
-										var result = scope.checkCode();
-										if (result) {
-											errorlineno = "" + (parseInt(result.lineNo) + 1);
-											errormessage = "" + result.message;
-											errormessage = errormessage.replace("&#039;", "'");
-										};
+										// var result = scope.checkCode();
+										// if (result) {
+										// 	errorlineno = "" + (parseInt(result.lineNo) + 1);
+										// 	errormessage = "" + result.message;
+										// 	errormessage = errormessage.replace("&#039;", "'");
+										// };
 									};
 									/** Legacy code from without angular-ui.js */
 									//if (scope != null) {
@@ -171,7 +171,7 @@
 						<br />
 						<div class="buttons">
 							<button type="button" id="compile-button" class="btn btn-lg btn-primary" data-loading-text="compiling..." ng-click="compile()">compile</button>
-							<div class="btn-group">
+							<!-- <div class="btn-group">
 							<button type="button" class="btn btn-lg dropdown-toggle" data-toggle="dropdown">Load example <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
@@ -181,7 +181,7 @@
 								<li><a href="#" ng-click="ccode='int swap(int *x, int *y) {\n\tint temp = *x;\n\t*x = *y;\n\t*y = temp;\n}\n\nint main() {\n\tint x = 5;\t\n\tint y = 10;\n\tswap(&x, &y);\n\treturn 0;\n}'">Swap function</a></li>
 								<li><a href="#" ng-click="ccode='int fact(int x) {\n\tif (x <= 1) return 1;\n\treturn x * fact(x-1);\n}\n\nint main() {\n\tint x = 4;\t\n\treturn fact(x);\n}'">Recursive function</a></li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
@@ -193,9 +193,9 @@
 				<canvas id="connecter_canvas" width="300"></canvas>
 				<div id="asmcode-compare"></div>
 			</div>
-			<div class="buttons">
+			<!-- <div class="buttons">
 				<button type="button" class="interprete-button btn btn-lg btn-primary" ng-click="interprete()" data-loading-text="initializing...">interprete</button>
-			</div>
+			</div> -->
 		</div>
 		</div>
 		<div class="tile" id="interpreter">
@@ -364,10 +364,10 @@
   ga('send', 'pageview');
 
 </script>
-	 <div id="footer">
+	 <!-- <div id="footer">
       <div class="container text-center">
         <p><a href="sitemap.html">Sitemap</a>.</p>
       </div>
-    </div>
+    </div> -->
 	</body>
 </html>

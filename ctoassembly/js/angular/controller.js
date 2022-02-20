@@ -5,7 +5,8 @@ app.controller("Controller", function($scope) {
 	/** @scope */ $scope.constants = Const;
 
 	/** C code entered by user in the editor. */
-	/** @scope */ $scope.ccode = "//You must always define the 'main()' function, as it is an execution entry point\nint main() {\n\n}";
+	/** @scope */ $scope.ccode = "int main() {\n\tint num1 = 3;\n\tint num2 = 5;\n\n\n\tnum1 = num1 + num2;\n\n\n\treturn 0;\n\n}"
+	//You must always define the 'main()' function, as it is an execution entry point\nint main() {\n\n}";
 	
 	/** C code entered by user has errors */
 	/** @scope */ $scope.isCompileErrors = false;
@@ -35,16 +36,18 @@ app.controller("Controller", function($scope) {
 	 * @private
 	 */
 	function invokeCompiler(ccode) {
-		var result = $.ajax({
-			type: "post",
-			url: "/compile",
-			async: false,
-			data: {
-				ccode: ccode
-			},
-			dataType: "json"
-		});
-		return result.responseJSON;
+		// var result = $.ajax({
+		// 	type: "post",
+		// 	url: "/compile",
+		// 	async: false,
+		// 	data: {
+		// 		ccode: ccode
+		// 	},
+		// 	dataType: "json"
+		// });
+		var fixed_output = `{"instructions":[{"clineNo":null,"generatedCode":"main:","description":{"title":null,"description":"Label pointing to an instruction from which a functoin starts."}},{"clineNo":0,"generatedCode":"\\t\\t\\tPUSH\\t%BP","description":{"title":"Function entry routine","description":"Saves the state of the base pointer onto the stack and increments the stack pointer."}},{"clineNo":0,"generatedCode":"\\t\\t\\tMOV\\t%SP,%BP","description":{"title":null,"description":"Move the value of the stack pointer to the base pointer. Let the base pointer point to the current top of the stack (stack pointer always points to the top of the stack)."}},{"clineNo":null,"generatedCode":"@main_body:","description":{"title":null,"description":"Label pointing to an instruction that starts a logical block of code (e.g. function body, function exit routine, etc)."}},{"clineNo":1,"generatedCode":"\\t\\t\\tSUB\\t%SP,$4,%SP","description":{"title":null,"description":"Reserve space on the stack for 1 local variable."}},{"clineNo":1,"generatedCode":"\\t\\t\\tMOV\\t$3,-4(%BP)","description":{"title":null,"description":"Moves the value from the first operand into the second."}},{"clineNo":2,"generatedCode":"\\t\\t\\tSUB\\t%SP,$4,%SP","description":{"title":null,"description":"Reserve space on the stack for 1 local variable."}},{"clineNo":2,"generatedCode":"\\t\\t\\tMOV\\t$5,-8(%BP)","description":{"title":null,"description":"Moves the value from the first operand into the second."}},{"clineNo":5,"generatedCode":"\\t\\t\\tADD\\t-4(%BP),-8(%BP),%0","description":{"title":null,"description":"Straight forwawrd binary arithmetic instruction. The arithemtic operation is executed on the first two operands and the result is stored in the third one."}},{"clineNo":5,"generatedCode":"\\t\\t\\tMOV\\t%0,-4(%BP)","description":{"title":null,"description":"Moves the value from the first operand into the second."}},{"clineNo":8,"generatedCode":"\\t\\t\\tMOV\\t$0,%13","description":{"title":null,"description":"Moves the value from the first operand into the second."}},{"clineNo":8,"generatedCode":"\\t\\t\\tJMP\\t@main_exit","description":{"title":null,"description":"Unconditional jump to the functions exit routine."}},{"clineNo":null,"generatedCode":"@main_exit:","description":{"title":null,"description":"Label pointing to an instruction that starts a logical block of code (e.g. function body, function exit routine, etc)."}},{"clineNo":10,"generatedCode":"\\t\\t\\tMOV\\t%BP,%SP","description":{"title":"Function exit routine","description":"Move the value of the base pointer to the stack pointer. Since stack pointer has a new value (greater than before) there is a new top of the stack. Practically the stack is \\"popped\\" to the beginning of the function (where base pointer was pointing to)."}},{"clineNo":10,"generatedCode":"\\t\\t\\tPOP\\t%BP","description":{"title":null,"description":"Pops the value from the stack (previous state of the base pointer) that was added in function entry routine and stores it into the base pointer. A value from the stack is removed and so the stack poitner is decremented."}},{"clineNo":10,"generatedCode":"\\t\\t\\tRET","description":{"title":null,"description":"Pops the value from the stack into the program counter register (the address of the next instruction to be executed), i.e. unconditionally jumps to the address in the PC register."}}]}`;
+		// return result.responseJSON;
+		return JSON.parse(fixed_output);
 	};
 
 
@@ -71,7 +74,8 @@ app.controller("Controller", function($scope) {
 		cToAsmCodeLineMapping = extractMapping(response);
 		
 		startAnimating = false;
-		Ui.writeCompareCCodeTable($scope.ccode.split("\n"));		Ui.writeCompareAsmCodeTable($scope.cpu.asmcode);
+		Ui.writeCompareCCodeTable($scope.ccode.split("\n"));
+		Ui.writeCompareAsmCodeTable($scope.cpu.asmcode);
 		Ui.showTile("#compare-page");
 		
 		//Look at the docs.css, heights settings for html and body. Dirty hack to make
