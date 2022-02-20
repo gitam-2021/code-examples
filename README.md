@@ -11,4 +11,5 @@
 
 ## Explorable Explainations
 
-1. What happens when you [change index variable](explorable/loops/index-variable) in a for loop?  
+1. Explore how output changes when you change the initialization statement, condition statement, increment statment in a [for loop](explorable/loops/for).
+2. What happens when you [change index variable](explorable/loops/index-variable) in a for loop?  

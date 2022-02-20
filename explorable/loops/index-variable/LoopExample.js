@@ -10,11 +10,11 @@ window.addEvent('domready', function () {
 
     var model = {
         initialize: function () {
-            this.initialize_step = 0;
+            this.initialize_step = 1;
             this.condition_max_value = 5;
-            this.increment_step = 1;
+            this.increment_step = 2;
             this.index_var_change = 1
-            this.prog_output = "1 3 5";
+            this.prog_output = "3";
         },
         update: function () {
             var out = "";
