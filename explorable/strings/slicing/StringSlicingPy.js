@@ -94,31 +94,6 @@ window.addEvent('domready', function () {
             }
 
             this.prog_output = "<br><br>" + "Thavaasmi" + "<br>" + this.slicing_output + "<br>" + this.only_end_ouput + "<br>" + this.only_begin_ouput
-            // if (this.range_step == 0) {
-            //     this.prog_output = "range() arg 3 must not be zero";
-            // } else if (this.range_start == this.range_end) {
-            //     this.prog_output = "";
-            // }else if (this.range_start < this.range_end) {
-            //     if (this.range_step < 0) {
-            //         this.prog_output = ""
-            //     } else {
-            //         var out = "";
-            //         for (var i = this.range_start; i < this.range_end; i = i + this.range_step) {
-            //             out += i.toString() + " ";
-            //         }
-            //         this.prog_output = (out == "") ? "" : out; 
-            //     } 
-            // } else if (this.range_start > this.range_end) {
-            //     if (this.range_step > 0) {
-            //         this.prog_output = ""
-            //     } else {
-            //         var out = "";
-            //         for (var i = this.range_start; i > this.range_end; i = i + this.range_step) {
-            //             out += i.toString() + " ";
-            //         }
-            //         this.prog_output = (out == "") ? "" : out; 
-            //     }
-            // }
         }
     };
     
