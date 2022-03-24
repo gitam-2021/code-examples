@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <base target="_top">
-    <title>String indexing Python example</title>
+    <title>String Slicing Python example</title>
 
     <!-- stylesheets -->
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="../../TangleKit/TangleKit.js"></script>
 
     <!-- examples -->
-    <script type="text/javascript" src="StringIndexingPy.js"></script>
+    <script type="text/javascript" src="StringSlicingPy.js"></script>
 
     <!-- Enable Discussion on this page
         Add relavent question to be answered in a group of students
@@ -37,7 +37,7 @@
         <!-- header -->
 
         <div id="header">
-            <h1>String indexing</h1>
+            <h1>String Slicing</h1>
             <h3>in Python</h3>
         </div> <!-- header -->
 
@@ -47,24 +47,34 @@
 
         <div id="body">
             <br>
-            <p>Explore how string indexing in python works. Try changing index value: click on the number and drag to right or left</p>
+            <p>Explore how string slicing works. Try changing the numbers: click on any number and drag to right or left
+            </p>
 
-            <div id="StringIndexingPyExample" class="example">
+            <div id="StringSlicingPyExample" class="example">
                 <div class="exampleTop"></div>
                 <div class="exampleCenter">
                     <code>
-                    book_name = "Thavaasmi"
-                    <br><br>
-                    
-                    print(book_name[<span data-var="string_index" class="TKAdjustableNumber" data-min="-12" data-max="12"></span>])
-                    <br><br>
-        </code>
+                        book_name = "Thavaasmi"
+                        <br>
+                        book_title = "I-belong-to-you"
+                        <br><br>
+                        print(book_name)
+                        <br>
+                        print(book_title[<span data-var="string_begin" class="TKAdjustableNumber" data-min="-20" data-max="20"></span> : <span data-var="string_end" class="TKAdjustableNumber" data-min="-20" data-max="20"></span>]) # begin:end
+                        <br>
+                        print(book_title[:<span data-var="string_only_end" class="TKAdjustableNumber" data-min="-20" data-max="20"></span>]) # :end
+                        <br>
+                        print(book_title[<span data-var="string_only_begin" class="TKAdjustableNumber" data-min="-20" data-max="20"></span>:]) # begin:
+                        <br><br>
+
+                        <img width="100%" src="./python-string-slicing-index.png"></img>
+                        
+                    </code>
                 </div>
                 <div class="exampleCenter">
                 <code>
-                    <span>Output: <span data-var="prog_output"></span>
+                    <b>Output:</b> <span data-var="prog_output"></span>
                 </code>
-                </span>
                 </div>
                 <div class="exampleBottom"></div>
             </div>
