@@ -19,6 +19,8 @@
 1. [For loop](explorable/loops/for-range-2-py/) using ```range``` with 2 arguments.
 2. [For loop](explorable/loops/for-range-3-py/) using ```range``` with 3 arguments.
 3. [For loop](explorable/loops/for-list-range-3-py/) using a ```list``` created with ```range``` with 3 arguments.
+4. [String indexing](explorable/strings/indexing/).
+5. [String slicing](explorable/strings/slicing/) using ```begin:end```, just ```:end``` and ```begin:```.
 
 ## C Code to Assembly
 
