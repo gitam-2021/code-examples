@@ -21,6 +21,7 @@
 3. [For loop](explorable/loops/for-list-range-3-py/) using a ```list``` created with ```range``` with 3 arguments.
 4. [String indexing](explorable/strings/indexing/).
 5. [String slicing](explorable/strings/slicing/) using ```begin:end```, just ```:end``` and ```begin:```.
+6. [Pattern Printing](explorable/patterns/one-pattern/).
 
 ## C Code to Assembly
 
