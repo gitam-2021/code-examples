@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <base target="_top">
+    <title>Circle trasformation using joy.py</title>
+
+    <!-- stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../Fonts/Insolent/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../../Fonts/BorisBlackBloxx/stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../../style.css" type="text/css">
+
+    <!-- Tangle -->
+    <script type="text/javascript" src="../../Tangle.js"></script>
+
+    <!-- TangleKit -->
+    <link rel="stylesheet" href="../../TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="../../TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="../../TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="../../TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="../../TangleKit/TangleKit.js"></script>
+
+    <!-- examples -->
+    <script type="text/javascript" src="circlepy.js"></script>
+
+    <!-- Enable Discussion on this page
+        Add relavent question to be answered in a group of students
+        In a class or group. -->
+    <!-- <script src="https://hypothes.is/embed.js" async></script> -->
+
+</head>
+
+<body>
+    <div id="everything">
+        <!-- header -->
+
+        <div id="header">
+            <h1>Circle using joy.py</h1>
+            <h3>exploration</h3>
+        </div> <!-- header -->
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- body -->
+
+        <div id="body">
+            <br>
+           <p>Explore how the Circle trasformation using joy.py works. Try changing the numbers: click on any number and drag to right or left</p>
+
+            <div id="circlePyExample" class="example">
+                <div class="exampleTop"></div>
+                <div class="exampleCenter">
+                    <code>
+
+                    shape = circle(r=<span data-var="r" class="TKAdjustableNumber" data-min="10" data-max="120"></span>) | translate(x=<span data-var="x" class="TKAdjustableNumber" data-min="-50" data-max="50"></span>, y=<span data-var="y" class="TKAdjustableNumber" data-min="-50" data-max="50"></span>)
+                    show(shape)
+        </code>
+                </div>
+                <div class="exampleCenter">
+                <code>
+                    <span>Output: </span>
+                    <br><br>
+                    <span data-var="prog_output"></span>
+                </code>
+                </span>
+                </div>
+                <div class="exampleBottom"></div>
+            </div>
+<!-- footer -->
+</div>
+<div id="footer">
+    <div id="footerShadow"></div>
+    
+    <div class="author"><a href="../../../">Gitam 2021</a></div>
+    
+    </div> <!-- footer -->
+
+
+</div> <!-- everything -->
+</body>
+
+</html>
