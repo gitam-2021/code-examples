@@ -12,7 +12,7 @@ window.addEvent('domready', function () {
         initialize: function () {
             this.Numerator_step = 12;
             this.Denomintor_step = 6;
-            this.prog_output = "0";
+            this.prog_output = "2";
         },
         update: function () {
                 var out = "";
